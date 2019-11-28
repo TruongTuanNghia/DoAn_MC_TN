@@ -12,3 +12,17 @@ C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe
 C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.pdb
 C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.exe
 C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.pdb
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe.config
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.pdb
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.csprojAssemblyReference.cache
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmDMK.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmDN.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmMain.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmMinhChung.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmTieuChi.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmTieuChuan.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.Properties.Resources.resources
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.csproj.GenerateResource.cache
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.exe
+D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.pdb
