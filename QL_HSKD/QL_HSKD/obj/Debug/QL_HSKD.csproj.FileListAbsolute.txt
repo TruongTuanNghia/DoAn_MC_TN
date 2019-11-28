@@ -1,0 +1,14 @@
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe.config
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmDMK.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmDN.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmMain.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmMinhChung.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmTieuChi.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.frmTieuChuan.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.Properties.Resources.resources
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.csproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.pdb
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.exe
+C:\Users\Dell\Desktop\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.pdb
