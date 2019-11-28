@@ -26,3 +26,6 @@ D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.Properties.Resources.resources
 D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.csproj.GenerateResource.cache
 D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.exe
 D:\DO_AN\CODE\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.pdb
+C:\Users\Dell\Desktop\GitHub\QL_HSKD\QL_HSKD\bin\Debug\QL_HSKD.exe.config
+C:\Users\Dell\Desktop\GitHub\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.exe
+C:\Users\Dell\Desktop\GitHub\QL_HSKD\QL_HSKD\obj\Debug\QL_HSKD.pdb
