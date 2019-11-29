@@ -7,24 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.IO;
 
 namespace QL_HSKD
 {
     public partial class frmTieuChuan : Form
     {
+<<<<<<< HEAD
         SqlConnection conn;
         DataTable dt;
         SqlDataAdapter da;
         DataView dtv;
+=======
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
         public frmTieuChuan()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=DESKTOP-OF9JLA8\HIEUKHAI;Initial Catalog=QL_HoSoKiemDinh;User ID=sa;Password=1234");
         }
 
-        void Load_DataGridView_TieuChuan()
+        private void btnThem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             dt = new DataTable();
             string sql = "SELECT * from TIEUCHUAN order by MATIEUCHUAN ASC ";
             da = new SqlDataAdapter(sql, conn);
@@ -32,6 +35,8 @@ namespace QL_HSKD
             dtv = new DataView(dt);
             dgv_DSTieuchuan.DataSource = dtv;
             
+=======
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
 
         }
         private void dt_Click_1()
@@ -43,6 +48,7 @@ namespace QL_HSKD
             txtTieuDeTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[2].Value.ToString();
             
 
+<<<<<<< HEAD
         }
         private void frmTieuChuan_Load(object sender, EventArgs e)
         {
@@ -53,6 +59,35 @@ namespace QL_HSKD
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+=======
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)+@"\QLHS";
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);       
+                }
+               
+                 String TC = path + @"\"+txtTTC.Text;
+                 if (Directory.Exists(TC))
+                  {  
+                     MessageBox.Show("Thư mục "+txtTTC.Text+" này đã tồn tại");
+                     txtTTC.Text = "";
+                  }
+                  else
+                   {
+                     Directory.CreateDirectory(Path.Combine(TC));
+                     MessageBox.Show("Tạo thư mục "+txtTTC.Text+" thành công");
+                   }
+                
+            }
+            catch
+            {
+                MessageBox.Show("lỗi");
+            }
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
         }
 
         private void dgv_DSTieuchuan_CellContentClick(object sender, DataGridViewCellEventArgs e)

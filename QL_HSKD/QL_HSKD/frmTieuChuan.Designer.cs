@@ -30,13 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTieuChuan));
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_DSTieuchuan = new System.Windows.Forms.DataGridView();
+            this.dgvTC = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.txtMaTieuChuan = new System.Windows.Forms.TextBox();
             this.txtTenTieuChuan = new System.Windows.Forms.TextBox();
             this.txtTieuDeTieuChuan = new System.Windows.Forms.TextBox();
+=======
+            this.txtMaTC = new System.Windows.Forms.TextBox();
+            this.txtTTC = new System.Windows.Forms.TextBox();
+            this.txtTD = new System.Windows.Forms.TextBox();
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -44,7 +50,7 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSTieuchuan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTC)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +65,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC TIÊU CHUẨN";
             // 
-            // dgv_DSTieuchuan
+            // dgvTC
             // 
+<<<<<<< HEAD
             this.dgv_DSTieuchuan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSTieuchuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DSTieuchuan.Location = new System.Drawing.Point(0, 162);
@@ -68,6 +75,13 @@
             this.dgv_DSTieuchuan.Size = new System.Drawing.Size(694, 184);
             this.dgv_DSTieuchuan.TabIndex = 18;
             this.dgv_DSTieuchuan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSTieuchuan_CellContentClick);
+=======
+            this.dgvTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTC.Location = new System.Drawing.Point(0, 162);
+            this.dgvTC.Name = "dgvTC";
+            this.dgvTC.Size = new System.Drawing.Size(694, 184);
+            this.dgvTC.TabIndex = 18;
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
             // 
             // label2
             // 
@@ -99,6 +113,7 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Tên tiêu chuẩn";
             // 
+<<<<<<< HEAD
             // txtMaTieuChuan
             // 
             this.txtMaTieuChuan.Location = new System.Drawing.Point(167, 68);
@@ -120,6 +135,29 @@
             this.txtTieuDeTieuChuan.Name = "txtTieuDeTieuChuan";
             this.txtTieuDeTieuChuan.Size = new System.Drawing.Size(465, 20);
             this.txtTieuDeTieuChuan.TabIndex = 24;
+=======
+            // txtMaTC
+            // 
+            this.txtMaTC.Location = new System.Drawing.Point(167, 68);
+            this.txtMaTC.Name = "txtMaTC";
+            this.txtMaTC.Size = new System.Drawing.Size(131, 20);
+            this.txtMaTC.TabIndex = 22;
+            // 
+            // txtTTC
+            // 
+            this.txtTTC.Location = new System.Drawing.Point(501, 65);
+            this.txtTTC.Name = "txtTTC";
+            this.txtTTC.Size = new System.Drawing.Size(131, 20);
+            this.txtTTC.TabIndex = 23;
+            // 
+            // txtTD
+            // 
+            this.txtTD.Location = new System.Drawing.Point(167, 122);
+            this.txtTD.Multiline = true;
+            this.txtTD.Name = "txtTD";
+            this.txtTD.Size = new System.Drawing.Size(465, 20);
+            this.txtTD.TabIndex = 24;
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
             // 
             // panel1
             // 
@@ -182,7 +220,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
             // 
@@ -215,6 +252,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -231,6 +269,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmTieuChuan
             // 
@@ -239,18 +278,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(694, 405);
             this.Controls.Add(this.panel1);
+<<<<<<< HEAD
             this.Controls.Add(this.txtTieuDeTieuChuan);
             this.Controls.Add(this.txtTenTieuChuan);
             this.Controls.Add(this.txtMaTieuChuan);
+=======
+            this.Controls.Add(this.txtTD);
+            this.Controls.Add(this.txtTTC);
+            this.Controls.Add(this.txtMaTC);
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgv_DSTieuchuan);
+            this.Controls.Add(this.dgvTC);
             this.Controls.Add(this.label1);
             this.Name = "frmTieuChuan";
             this.Text = "Danh mục tiêu chuẩn";
-            this.Load += new System.EventHandler(this.frmTieuChuan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSTieuchuan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTC)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,13 +304,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgv_DSTieuchuan;
+        private System.Windows.Forms.DataGridView dgvTC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+<<<<<<< HEAD
         private System.Windows.Forms.TextBox txtMaTieuChuan;
         private System.Windows.Forms.TextBox txtTenTieuChuan;
         private System.Windows.Forms.TextBox txtTieuDeTieuChuan;
+=======
+        private System.Windows.Forms.TextBox txtMaTC;
+        private System.Windows.Forms.TextBox txtTTC;
+        private System.Windows.Forms.TextBox txtTD;
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;

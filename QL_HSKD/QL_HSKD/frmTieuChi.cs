@@ -7,8 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data.SqlClient;
 
+=======
+using System.IO;
+>>>>>>> 83961e4ffdd039407d6d3d418fd84254422bba1e
 namespace QL_HSKD
 {
     public partial class frmTieuChi : Form
@@ -72,6 +76,14 @@ namespace QL_HSKD
         private void dgv_DSTieuChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dt_Click_1();
+        }
+        void layTTC()
+        {
+            
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
