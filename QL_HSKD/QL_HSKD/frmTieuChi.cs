@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace QL_HSKD
 {
     public partial class frmTieuChi : Form
@@ -15,6 +15,14 @@ namespace QL_HSKD
         public frmTieuChi()
         {
             InitializeComponent();
+        }
+        void layTTC()
+        {
+            
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

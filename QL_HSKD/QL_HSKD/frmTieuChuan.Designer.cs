@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTieuChuan));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvTC = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMaTC = new System.Windows.Forms.TextBox();
+            this.txtTTC = new System.Windows.Forms.TextBox();
+            this.txtTD = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -44,7 +44,7 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTC)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,13 +59,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DANH MỤC TIÊU CHUẨN";
             // 
-            // dataGridView1
+            // dgvTC
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(694, 184);
-            this.dataGridView1.TabIndex = 18;
+            this.dgvTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTC.Location = new System.Drawing.Point(0, 162);
+            this.dgvTC.Name = "dgvTC";
+            this.dgvTC.Size = new System.Drawing.Size(694, 184);
+            this.dgvTC.TabIndex = 18;
             // 
             // label2
             // 
@@ -97,27 +97,27 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Tên tiêu chuẩn";
             // 
-            // textBox1
+            // txtMaTC
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 22;
+            this.txtMaTC.Location = new System.Drawing.Point(167, 68);
+            this.txtMaTC.Name = "txtMaTC";
+            this.txtMaTC.Size = new System.Drawing.Size(131, 20);
+            this.txtMaTC.TabIndex = 22;
             // 
-            // textBox2
+            // txtTTC
             // 
-            this.textBox2.Location = new System.Drawing.Point(501, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 23;
+            this.txtTTC.Location = new System.Drawing.Point(501, 65);
+            this.txtTTC.Name = "txtTTC";
+            this.txtTTC.Size = new System.Drawing.Size(131, 20);
+            this.txtTTC.TabIndex = 23;
             // 
-            // textBox3
+            // txtTD
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 122);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(465, 20);
-            this.textBox3.TabIndex = 24;
+            this.txtTD.Location = new System.Drawing.Point(167, 122);
+            this.txtTD.Multiline = true;
+            this.txtTD.Name = "txtTD";
+            this.txtTD.Size = new System.Drawing.Size(465, 20);
+            this.txtTD.TabIndex = 24;
             // 
             // panel1
             // 
@@ -212,6 +212,7 @@
             this.btnLuu.Text = "Lưu";
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThem
             // 
@@ -228,6 +229,7 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmTieuChuan
             // 
@@ -236,17 +238,17 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(694, 405);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTD);
+            this.Controls.Add(this.txtTTC);
+            this.Controls.Add(this.txtMaTC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTC);
             this.Controls.Add(this.label1);
             this.Name = "frmTieuChuan";
             this.Text = "Danh mục tiêu chuẩn";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTC)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -256,13 +258,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvTC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMaTC;
+        private System.Windows.Forms.TextBox txtTTC;
+        private System.Windows.Forms.TextBox txtTD;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
