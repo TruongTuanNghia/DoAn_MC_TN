@@ -27,6 +27,12 @@ namespace QL_HSKD
 
         }
 
-       
+        private void tiêuChuẩnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTieuChuan fm = new frmTieuChuan();
+            this.Hide();
+            fm.ShowDialog();
+            this.Show();
+        }
     }
 }
