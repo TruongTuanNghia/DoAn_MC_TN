@@ -34,5 +34,13 @@ namespace QL_HSKD
             fm.ShowDialog();
             this.Show();
         }
+
+        private void tiêuChíToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTieuChi fm = new frmTieuChi();
+            this.Hide();
+            fm.ShowDialog();
+            this.Show();
+        }
     }
 }

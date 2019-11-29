@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTieuChi));
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNoiDungTC = new System.Windows.Forms.TextBox();
+            this.txtTenTC = new System.Windows.Forms.TextBox();
+            this.txtMaTC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_DSTieuChi = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cobMaTieuChuan = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -46,31 +46,31 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSTieuChi)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txtNoiDungTC
             // 
-            this.textBox3.Location = new System.Drawing.Point(510, 43);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 90);
-            this.textBox3.TabIndex = 38;
+            this.txtNoiDungTC.Location = new System.Drawing.Point(510, 45);
+            this.txtNoiDungTC.Multiline = true;
+            this.txtNoiDungTC.Name = "txtNoiDungTC";
+            this.txtNoiDungTC.Size = new System.Drawing.Size(216, 90);
+            this.txtNoiDungTC.TabIndex = 38;
             // 
-            // textBox2
+            // txtTenTC
             // 
-            this.textBox2.Location = new System.Drawing.Point(199, 113);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 37;
+            this.txtTenTC.Location = new System.Drawing.Point(199, 113);
+            this.txtTenTC.Name = "txtTenTC";
+            this.txtTenTC.Size = new System.Drawing.Size(131, 20);
+            this.txtTenTC.TabIndex = 37;
             // 
-            // textBox1
+            // txtMaTC
             // 
-            this.textBox1.Location = new System.Drawing.Point(199, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 36;
+            this.txtMaTC.Location = new System.Drawing.Point(199, 77);
+            this.txtMaTC.Name = "txtMaTC";
+            this.txtMaTC.Size = new System.Drawing.Size(131, 20);
+            this.txtMaTC.TabIndex = 36;
             // 
             // label4
             // 
@@ -102,13 +102,15 @@
             this.label2.TabIndex = 33;
             this.label2.Text = "Mã tiêu chí";
             // 
-            // dataGridView1
+            // dgv_DSTieuChi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 157);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(706, 186);
-            this.dataGridView1.TabIndex = 32;
+            this.dgv_DSTieuChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DSTieuChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_DSTieuChi.Location = new System.Drawing.Point(1, 157);
+            this.dgv_DSTieuChi.Name = "dgv_DSTieuChi";
+            this.dgv_DSTieuChi.Size = new System.Drawing.Size(780, 186);
+            this.dgv_DSTieuChi.TabIndex = 32;
+            this.dgv_DSTieuChi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSTieuChi_CellContentClick);
             // 
             // label1
             // 
@@ -131,13 +133,14 @@
             this.label5.TabIndex = 39;
             this.label5.Text = "Mã tiêu chuẩn";
             // 
-            // comboBox1
+            // cobMaTieuChuan
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(199, 44);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 21);
-            this.comboBox1.TabIndex = 40;
+            this.cobMaTieuChuan.FormattingEnabled = true;
+            this.cobMaTieuChuan.Location = new System.Drawing.Point(199, 44);
+            this.cobMaTieuChuan.Name = "cobMaTieuChuan";
+            this.cobMaTieuChuan.Size = new System.Drawing.Size(131, 21);
+            this.cobMaTieuChuan.TabIndex = 40;
+            this.cobMaTieuChuan.SelectedIndexChanged += new System.EventHandler(this.cobMaTieuChuan_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -150,7 +153,7 @@
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Location = new System.Drawing.Point(1, 349);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(706, 47);
+            this.panel1.Size = new System.Drawing.Size(780, 47);
             this.panel1.TabIndex = 41;
             // 
             // btnXoa
@@ -160,7 +163,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(138, 1);
+            this.btnXoa.Location = new System.Drawing.Point(172, 1);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 40);
@@ -176,7 +179,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(255, 1);
+            this.btnSua.Location = new System.Drawing.Point(289, 1);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 40);
@@ -192,7 +195,7 @@
             this.btnThoat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(611, 1);
+            this.btnThoat.Location = new System.Drawing.Point(645, 1);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 40);
@@ -208,7 +211,7 @@
             this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(501, 3);
+            this.btnHuy.Location = new System.Drawing.Point(535, 3);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 40);
@@ -224,7 +227,7 @@
             this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(378, 1);
+            this.btnLuu.Location = new System.Drawing.Point(412, 1);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 40);
@@ -240,7 +243,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(16, 1);
+            this.btnThem.Location = new System.Drawing.Point(50, 1);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(73, 40);
@@ -254,21 +257,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(707, 392);
+            this.ClientSize = new System.Drawing.Size(784, 423);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cobMaTieuChuan);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNoiDungTC);
+            this.Controls.Add(this.txtTenTC);
+            this.Controls.Add(this.txtMaTC);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_DSTieuChi);
             this.Controls.Add(this.label1);
             this.Name = "frmTieuChi";
             this.Text = "Danh mục tiêu chí";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmTieuChi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSTieuChi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,16 +281,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNoiDungTC;
+        private System.Windows.Forms.TextBox txtTenTC;
+        private System.Windows.Forms.TextBox txtMaTC;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_DSTieuChi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cobMaTieuChuan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;

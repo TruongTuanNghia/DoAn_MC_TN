@@ -158,6 +158,7 @@
             this.tiêuChíToolStripMenuItem.Name = "tiêuChíToolStripMenuItem";
             this.tiêuChíToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.tiêuChíToolStripMenuItem.Text = "Tiêu Chí";
+            this.tiêuChíToolStripMenuItem.Click += new System.EventHandler(this.tiêuChíToolStripMenuItem_Click);
             // 
             // minhChứngToolStripMenuItem
             // 
