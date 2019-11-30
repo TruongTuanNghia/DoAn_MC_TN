@@ -121,13 +121,16 @@
   <data name="icons8-close-window-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Hinh\icons8-close-window-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Hinh\hoso.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-login-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Hinh\icons8-login-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-password-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Hinh\icons8-password-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hoso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Hinh\hoso.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Phong canh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phong canh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

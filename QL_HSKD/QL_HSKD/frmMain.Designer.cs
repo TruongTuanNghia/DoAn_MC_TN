@@ -58,7 +58,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmiAcount,
@@ -94,6 +94,7 @@
             this.tmiChange.Name = "tmiChange";
             this.tmiChange.Size = new System.Drawing.Size(213, 24);
             this.tmiChange.Text = "Đổi mật khẩu";
+            this.tmiChange.Click += new System.EventHandler(this.tmiChange_Click);
             // 
             // toolStripSeparator1
             // 
@@ -158,12 +159,14 @@
             this.tiêuChíToolStripMenuItem.Name = "tiêuChíToolStripMenuItem";
             this.tiêuChíToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.tiêuChíToolStripMenuItem.Text = "Tiêu Chí";
+            this.tiêuChíToolStripMenuItem.Click += new System.EventHandler(this.tiêuChíToolStripMenuItem_Click_1);
             // 
             // minhChứngToolStripMenuItem
             // 
             this.minhChứngToolStripMenuItem.Name = "minhChứngToolStripMenuItem";
             this.minhChứngToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.minhChứngToolStripMenuItem.Text = "Minh Chứng";
+            this.minhChứngToolStripMenuItem.Click += new System.EventHandler(this.minhChứngToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem
             // 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProvider.cs" />
     <Compile Include="frmDMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Phong canh.jpg" />
+    <None Include="Hinh\Phong canh.jpg" />
     <None Include="Hinh\hoso.jpg" />
     <Content Include="Hinh\add.ico" />
     <Content Include="Hinh\icons8-close-window-32.png" />

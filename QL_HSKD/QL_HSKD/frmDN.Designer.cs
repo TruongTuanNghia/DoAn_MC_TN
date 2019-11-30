@@ -99,6 +99,7 @@
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblMatKhau.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblMatKhau.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblMatKhau.Location = new System.Drawing.Point(160, 81);
@@ -121,6 +122,7 @@
             // lblTaiKhoan
             // 
             this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lblTaiKhoan.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
             this.lblTaiKhoan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.lblTaiKhoan.Location = new System.Drawing.Point(152, 27);
@@ -135,6 +137,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
+            this.BackgroundImage = global::QL_HSKD.Properties.Resources.hoso;
             this.ClientSize = new System.Drawing.Size(518, 211);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnThoat);
@@ -146,6 +149,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDN";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

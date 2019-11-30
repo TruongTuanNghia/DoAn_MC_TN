@@ -16,7 +16,7 @@ namespace QL_HSKD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTieuChuan());
+            Application.Run(new frmDN());
         }
     }
 }
