@@ -17,7 +17,7 @@ namespace QL_HSKD
         SqlDataAdapter da_nv;
         DataView dtv_nv;
 
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-OF9JLA8\HIEUKHAI;Initial Catalog=QL_HoSoKiemDinh;User ID=sa;Password=1234");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-6O1SKBD\SQLEXPRESS;Initial Catalog=QL_HoSoKiemDinh;User ID=sa;Password=sa2012");
         public frmDN()
         {
             InitializeComponent();
@@ -45,6 +45,11 @@ namespace QL_HSKD
             {
                 MessageBox.Show("Đăng nhập thất bại");
             }
+        }
+
+        private void frmDN_Load(object sender, EventArgs e)
+        {
+            this.AcceptButton = btnLogin;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tmiAcount = new System.Windows.Forms.ToolStripMenuItem();
             this.tmiChange = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,7 @@
             this.quáTrìnhThựcHiệnTiêuChíToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tRỢGIÚPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -237,12 +239,17 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QL_HSKD.Properties.Resources.hoso;
+            
             this.pictureBox1.Location = new System.Drawing.Point(0, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(798, 379);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // frmMain
             // 
@@ -287,5 +294,6 @@
         private System.Windows.Forms.ToolStripMenuItem tiêuChuẩnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiêuChíToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem minhChứngToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

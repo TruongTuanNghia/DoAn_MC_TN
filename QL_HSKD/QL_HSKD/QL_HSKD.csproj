@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProvider.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDMK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +88,17 @@
     <Compile Include="frmTieuChuan.Designer.cs">
       <DependentUpon>frmTieuChuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXemTatCaPMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemTatCaPMC.Designer.cs">
+      <DependentUpon>frmXemTatCaPMC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDMK.resx">
       <DependentUpon>frmDMK.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTieuChuan.resx">
       <DependentUpon>frmTieuChuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemTatCaPMC.resx">
+      <DependentUpon>frmXemTatCaPMC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,15 +144,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hinh\phanMC.jpg" />
+    <Content Include="Hinh\tieuchuan.jpg" />
     <None Include="Resources\Phong canh.jpg" />
-    <None Include="Hinh\Phong canh.jpg" />
-    <None Include="Hinh\hoso.jpg" />
+    <None Include="Resources\hoso.jpg" />
     <Content Include="Hinh\add.ico" />
+    <Content Include="Hinh\file.jpg" />
+    <Content Include="Hinh\hinhnenMC.jpg" />
+    <Content Include="Hinh\hoso_tv.png" />
     <Content Include="Hinh\icons8-close-window-32.png" />
     <Content Include="Hinh\icons8-login-32.png" />
     <Content Include="Hinh\icons8-password-128.png" />
     <Content Include="Hinh\login.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

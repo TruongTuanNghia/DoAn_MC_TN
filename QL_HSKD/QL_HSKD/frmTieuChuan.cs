@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace QL_HSKD
 {
@@ -17,37 +18,48 @@ namespace QL_HSKD
         DataTable dt;
         SqlDataAdapter da;
         DataView dtv;
+        String path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\QLHSKD";
         public frmTieuChuan()
         {
             InitializeComponent();
-            conn = new SqlConnection(@"Data Source=DESKTOP-OF9JLA8\HIEUKHAI;Initial Catalog=QL_HoSoKiemDinh;User ID=sa;Password=1234");
+           
+            conn = new SqlConnection(@"Data Source=DESKTOP-6O1SKBD\SQLEXPRESS;Initial Catalog=QL_HoSoKiemDinh;User ID=sa;Password=sa2012");
         }
 
         void Load_DataGridView_TieuChuan()
         {
-            dt = new DataTable();
-            string sql = "SELECT * from TIEUCHUAN order by MATIEUCHUAN ASC ";
-            da = new SqlDataAdapter(sql, conn);
-            da.Fill(dt);
-            dtv = new DataView(dt);
-            dgv_DSTieuchuan.DataSource = dtv;
-            
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            try 
+            {
+                dt = new DataTable();
+                string sql = "SELECT * from TIEUCHUAN order by MATIEUCHUAN ASC ";
+                da = new SqlDataAdapter(sql, conn);
+                da.Fill(dt);
+                dtv = new DataView(dt);
+                dgv_DSTieuchuan.DataSource = dtv;
+            }
+            catch
+            {
 
-        }
-        private void dt_Click_1()
-        {
-            int index = dgv_DSTieuchuan.CurrentRow.Index;
+            }
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
 
-            txtMaTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[0].Value.ToString();
-            txtTenTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[1].Value.ToString();
-            txtTieuDeTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[2].Value.ToString();
-            
-
-        }
+        }       
         private void frmTieuChuan_Load(object sender, EventArgs e)
         {
             Load_DataGridView_TieuChuan();
             
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -55,13 +67,14 @@ namespace QL_HSKD
             this.Close();
         }
 
-        private void dgv_DSTieuchuan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dt_Click_1();
-        }
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
             try
             {
                 DataRow r = dt.NewRow();
@@ -72,41 +85,58 @@ namespace QL_HSKD
                 SqlCommandBuilder cmd_builder = new SqlCommandBuilder(da);
                 da.Update(dt);
                 Load_DataGridView_TieuChuan();
-                MessageBox.Show("Thêm Thành Công");
+                
+                String TC = path + @"\" + txtMaTieuChuan.Text;
+                Directory.CreateDirectory(Path.Combine(TC));
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Không thể thực thi");
+                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if (conn.State == ConnectionState.Closed)
             {
-                string s = txtMaTieuChuan.Text.Trim();
-                string delete = "delete TIEUCHUAN where MATIEUCHUAN='" + s + "'";
-
-                if (this.dgv_DSTieuchuan.SelectedRows.Count > 0)
-                {
-                    dgv_DSTieuchuan.Rows.RemoveAt(this.dgv_DSTieuchuan.SelectedRows[0].Index);
-                    da = new SqlDataAdapter(delete, conn);
-                    da.Fill(dt);
-                    dtv = new DataView(dt);
-                    dgv_DSTieuchuan.DataSource = dtv;
-                }
-                MessageBox.Show("Xóa thành công");
-
+                conn.Open();
             }
-            catch
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                MessageBox.Show("Wrong! Can not Delete", "Nofitication", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                try
+                {
+                    string s = txtMaTieuChuan.Text.Trim();
+                    string delete = "delete TIEUCHUAN where MATIEUCHUAN='" + s + "'";
+                    SqlCommand cmd = new SqlCommand(delete, conn);
+                    cmd.ExecuteNonQuery();
+                    Load_DataGridView_TieuChuan();
+                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể xóa, Tiêu chuẩn này đang chứa Tiêu chí", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
             try
             {
                 if(conn.State==ConnectionState.Closed)
@@ -118,13 +148,36 @@ namespace QL_HSKD
                 SqlCommand cmd = new SqlCommand(update, conn);
                 cmd.ExecuteNonQuery();
                 Load_DataGridView_TieuChuan();
-                MessageBox.Show("Sửa thành công");
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-
+                MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
             }
         }
-        
+
+        private void dgv_DSTieuchuan_Click(object sender, EventArgs e)
+        {
+            int index = dgv_DSTieuchuan.CurrentRow.Index;
+
+            txtMaTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[0].Value.ToString();
+            txtTenTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[1].Value.ToString();
+            txtTieuDeTieuChuan.Text = dgv_DSTieuchuan.Rows[index].Cells[2].Value.ToString();
+
+        }
+
+        private void dgv_DSTieuchuan_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            string RowNumber = (e.RowIndex + 1).ToString();
+            SizeF size = e.Graphics.MeasureString(RowNumber, this.Font);
+            if (dgv_DSTieuchuan.RowHeadersWidth < (int)(size.Width + 20))
+                dgv_DSTieuchuan.RowHeadersWidth = (int)(size.Width + 20);
+            Brush b = SystemBrushes.ControlText;
+            e.Graphics.DrawString(RowNumber, this.Font, b, e.RowBounds.Location.X + 15, e.RowBounds.Location.Y + ((e.RowBounds.Height - size.Height) / 2));
+        }
     }
 }

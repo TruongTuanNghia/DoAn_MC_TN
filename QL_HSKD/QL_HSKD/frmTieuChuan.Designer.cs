@@ -42,6 +42,9 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.C1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.C3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSTieuchuan)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,14 +62,21 @@
             // 
             // dgv_DSTieuchuan
             // 
+            this.dgv_DSTieuchuan.AllowUserToAddRows = false;
             this.dgv_DSTieuchuan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSTieuchuan.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgv_DSTieuchuan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSTieuchuan.Location = new System.Drawing.Point(0, 162);
+            this.dgv_DSTieuchuan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.C1,
+            this.C2,
+            this.C3});
+            this.dgv_DSTieuchuan.Location = new System.Drawing.Point(0, 168);
             this.dgv_DSTieuchuan.Name = "dgv_DSTieuchuan";
-            this.dgv_DSTieuchuan.Size = new System.Drawing.Size(694, 191);
+            this.dgv_DSTieuchuan.ReadOnly = true;
+            this.dgv_DSTieuchuan.Size = new System.Drawing.Size(694, 265);
             this.dgv_DSTieuchuan.TabIndex = 18;
-            this.dgv_DSTieuchuan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSTieuchuan_CellContentClick);
+            this.dgv_DSTieuchuan.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgv_DSTieuchuan_RowPostPaint);
+            this.dgv_DSTieuchuan.Click += new System.EventHandler(this.dgv_DSTieuchuan_Click);
             // 
             // label2
             // 
@@ -101,6 +111,7 @@
             // txtMaTieuChuan
             // 
             this.txtMaTieuChuan.Location = new System.Drawing.Point(167, 68);
+            this.txtMaTieuChuan.MaxLength = 11;
             this.txtMaTieuChuan.Name = "txtMaTieuChuan";
             this.txtMaTieuChuan.Size = new System.Drawing.Size(131, 20);
             this.txtMaTieuChuan.TabIndex = 22;
@@ -108,6 +119,7 @@
             // txtTenTieuChuan
             // 
             this.txtTenTieuChuan.Location = new System.Drawing.Point(501, 65);
+            this.txtTenTieuChuan.MaxLength = 30;
             this.txtTenTieuChuan.Name = "txtTenTieuChuan";
             this.txtTenTieuChuan.Size = new System.Drawing.Size(131, 20);
             this.txtTenTieuChuan.TabIndex = 23;
@@ -127,7 +139,7 @@
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Location = new System.Drawing.Point(0, 352);
+            this.panel1.Location = new System.Drawing.Point(0, 433);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 53);
             this.panel1.TabIndex = 25;
@@ -139,7 +151,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(141, 6);
+            this.btnXoa.Location = new System.Drawing.Point(412, 5);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(81, 40);
@@ -156,7 +168,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(463, 6);
+            this.btnSua.Location = new System.Drawing.Point(158, 6);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(85, 40);
@@ -200,13 +212,42 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // C1
+            // 
+            this.C1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.C1.DataPropertyName = "MATIEUCHUAN";
+            this.C1.FillWeight = 76.14214F;
+            this.C1.HeaderText = "MÃ TIÊU CHUẨN";
+            this.C1.Name = "C1";
+            this.C1.ReadOnly = true;
+            this.C1.Width = 120;
+            // 
+            // C2
+            // 
+            this.C2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.C2.DataPropertyName = "TENTIEUCHUAN";
+            this.C2.FillWeight = 130.3582F;
+            this.C2.HeaderText = "TÊN TIÊU CHUẨN";
+            this.C2.Name = "C2";
+            this.C2.ReadOnly = true;
+            this.C2.Width = 150;
+            // 
+            // C3
+            // 
+            this.C3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.C3.DataPropertyName = "TIEUDETIEUCHUAN";
+            this.C3.FillWeight = 93.49964F;
+            this.C3.HeaderText = "TIÊU ĐỀ TIÊU CHUẨN";
+            this.C3.Name = "C3";
+            this.C3.ReadOnly = true;
+            // 
             // frmTieuChuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::QL_HSKD.Properties.Resources.Phong_canh;
-            this.ClientSize = new System.Drawing.Size(694, 405);
+            this.ClientSize = new System.Drawing.Size(694, 485);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTieuDeTieuChuan);
             this.Controls.Add(this.txtTenTieuChuan);
@@ -216,6 +257,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgv_DSTieuchuan);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "frmTieuChuan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh mục tiêu chuẩn";
@@ -242,5 +284,8 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn C3;
     }
 }

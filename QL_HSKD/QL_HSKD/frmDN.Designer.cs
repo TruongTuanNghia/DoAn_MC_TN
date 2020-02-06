@@ -29,15 +29,62 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDN));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.lblMatKhau = new System.Windows.Forms.Label();
             this.txtTK = new System.Windows.Forms.TextBox();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txtMK
+            // 
+            this.txtMK.BackColor = System.Drawing.Color.White;
+            this.txtMK.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
+            this.txtMK.Location = new System.Drawing.Point(277, 72);
+            this.txtMK.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.PasswordChar = '*';
+            this.txtMK.Size = new System.Drawing.Size(230, 32);
+            this.txtMK.TabIndex = 10;
+            // 
+            // lblMatKhau
+            // 
+            this.lblMatKhau.AutoSize = true;
+            this.lblMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblMatKhau.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblMatKhau.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblMatKhau.Location = new System.Drawing.Point(171, 79);
+            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMatKhau.Name = "lblMatKhau";
+            this.lblMatKhau.Size = new System.Drawing.Size(82, 17);
+            this.lblMatKhau.TabIndex = 11;
+            this.lblMatKhau.Text = "Mật khẩu:";
+            // 
+            // txtTK
+            // 
+            this.txtTK.BackColor = System.Drawing.Color.White;
+            this.txtTK.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
+            this.txtTK.Location = new System.Drawing.Point(277, 18);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(230, 32);
+            this.txtTK.TabIndex = 9;
+            // 
+            // lblTaiKhoan
+            // 
+            this.lblTaiKhoan.AutoSize = true;
+            this.lblTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTaiKhoan.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lblTaiKhoan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lblTaiKhoan.Location = new System.Drawing.Point(149, 25);
+            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTaiKhoan.Name = "lblTaiKhoan";
+            this.lblTaiKhoan.Size = new System.Drawing.Size(127, 17);
+            this.lblTaiKhoan.TabIndex = 8;
+            this.lblTaiKhoan.Text = "Tên dăng nhập:";
             // 
             // pictureBox1
             // 
@@ -85,59 +132,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtMK
-            // 
-            this.txtMK.BackColor = System.Drawing.Color.White;
-            this.txtMK.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
-            this.txtMK.Location = new System.Drawing.Point(266, 74);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.PasswordChar = '*';
-            this.txtMK.Size = new System.Drawing.Size(230, 32);
-            this.txtMK.TabIndex = 10;
-            // 
-            // lblMatKhau
-            // 
-            this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblMatKhau.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblMatKhau.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblMatKhau.Location = new System.Drawing.Point(160, 81);
-            this.lblMatKhau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(82, 17);
-            this.lblMatKhau.TabIndex = 11;
-            this.lblMatKhau.Text = "Mật khẩu:";
-            // 
-            // txtTK
-            // 
-            this.txtTK.BackColor = System.Drawing.Color.White;
-            this.txtTK.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
-            this.txtTK.Location = new System.Drawing.Point(266, 20);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(230, 32);
-            this.txtTK.TabIndex = 9;
-            // 
-            // lblTaiKhoan
-            // 
-            this.lblTaiKhoan.AutoSize = true;
-            this.lblTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTaiKhoan.Font = new System.Drawing.Font("Lucida Fax", 10.8F, System.Drawing.FontStyle.Bold);
-            this.lblTaiKhoan.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblTaiKhoan.Location = new System.Drawing.Point(152, 27);
-            this.lblTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTaiKhoan.Name = "lblTaiKhoan";
-            this.lblTaiKhoan.Size = new System.Drawing.Size(90, 17);
-            this.lblTaiKhoan.TabIndex = 8;
-            this.lblTaiKhoan.Text = "Tài khoản:";
-            // 
             // frmDN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.BackgroundImage = global::QL_HSKD.Properties.Resources.hoso;
+            this.BackgroundImage = global::QL_HSKD.Properties.Resources.Phong_canh;
             this.ClientSize = new System.Drawing.Size(518, 211);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnThoat);
@@ -151,6 +151,7 @@
             this.Name = "frmDN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.frmDN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

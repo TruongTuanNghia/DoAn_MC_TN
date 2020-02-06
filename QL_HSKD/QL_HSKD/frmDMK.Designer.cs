@@ -165,6 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = global::QL_HSKD.Properties.Resources.Phong_canh;
             this.ClientSize = new System.Drawing.Size(435, 290);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
@@ -177,6 +178,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblTaiKhoan);
             this.Name = "frmDMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi mật khẩu";
             this.ResumeLayout(false);
             this.PerformLayout();
